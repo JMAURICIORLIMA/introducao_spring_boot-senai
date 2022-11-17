@@ -11,13 +11,13 @@ import java.util.List;
 public class StudantService {
 
     @Autowired
-    private StudantRepository studantRepository;
+    StudantRepository studantRepository;
 
     public List<Studant> studantList(){
         return studantRepository.findAll();
     }
 
     public Studant studantAdd(Studant studant){
-
+        return studantRepository.save(studant);
     }
 }
